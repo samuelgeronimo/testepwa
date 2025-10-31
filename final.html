@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Bestguai: Preço Final SEM SURPRESA. Cotação Transparente em Compras do Paraguai. (Taxa Fixa 27%)</title>
+    <meta content="O Bestguai garante o preço final transparente (com a Taxa Fixa de 27% e todos os impostos inclusos) e a entrega segura de eletrônicos do Paraguai no Brasil. Evite o Risco de Ser Taxado na Estrada/Fronteira!" name="description"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#F5A623", // Laranja/Amarelo para AÇÃO e CTA
+                "primary-darker": "#E0931B", // Laranja/Amarelo mais escuro para hover
+                "secondary": "#0A2540", // Azul Escuro para CONFIANÇA e background
+                "secondary-light": "#4A90E2", // Azul Médio
+                "urgency-red": "#DC2626", // Vermelho forte para FOMO/Urgência
+                "background-light": "#FFFFFF",
+                "background-dark": "#0A2540",
+                "text-light": "#0A2540",
+                "text-dark": "#F8F9FA",
+                "subtle-light": "#F0F4F8",
+                "subtle-dark": "#162B42",
+                "border-light": "#E0E0E0",
+                "border-dark": "#30455A"
+              },
+              fontFamily: {
+                "display": ["Montserrat", "sans-serif"],
+                "sans": ["Poppins", "sans-serif"]
+              },
+              borderRadius: {
+                "DEFAULT": "0.5rem",
+                "lg": "0.75rem",
+                "xl": "1rem",
+                "full": "9999px"
+              },
+              keyframes: {
+                'fade-in-scale-up': {
+                  '0%': { opacity: '0', transform: 'scale(0.95)' },
+                  '100%': { opacity: '1', transform: 'scale(1)' },
+                },
+                'pulse-whatsapp': {
+                    '0%, 100%': { transform: 'scale(1)' },
+                    '50%': { transform: 'scale(1.05)' },
+                },
+                'pulse-fomo': {
+                    '0%, 100%': { opacity: '1' },
+                    '50%': { opacity: '0.9' },
+                }
+              },
+              animation: {
+                'fade-in-scale-up': 'fade-in-scale-up 0.5s ease-out forwards',
+                'pulse-whatsapp': 'pulse-whatsapp 2s infinite ease-in-out',
+                'pulse-fomo': 'pulse-fomo 1.5s infinite ease-in-out',
+              },
+            },
+          },
+        }
+    </script>
+    <style>
+        /* Estilos CSS */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+          vertical-align: middle;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(10, 37, 64, 0.85) 0%, rgba(10, 37, 64, 0.75) 100%), url('URL_DA_SUA_IMAGEM_DE_FUNDO_DE_ALTA_QUALIDADE_AQUI');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px;
+            padding-bottom: 0; 
+        }
+        @media (max-width: 639px) { /* sm breakpoint */
+            body {
+                padding-bottom: 72px; /* Altura do sticky footer mobile */
+            }
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background-color: #F5A623;
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s linear;
+        }
+        *:focus-visible {
+            outline: 2px solid #4A90E2;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        .cta-button-mobile {
+            @apply inline-flex items-center justify-center rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-primary-darker sm:hidden;
+        }
+    </style>
+</head>
+<body class="font-sans bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark">
+<div id="scroll-progress"></div>
+
+<a aria-label="Fale conosco no WhatsApp" class="fixed group bottom-5 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 p-3 text-white shadow-xl transition-transform hover:scale-110 active:scale-95 animate-pulse-whatsapp hidden sm:flex" href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o%20imediata%20de%20produtos%20do%20Paraguai%20com%20o%20Bestguai!" rel="noopener noreferrer" target="_blank" title="FALE COM A GENTE (WhatsApp): Resposta na Hora!">
+    <svg class="h-9 w-9" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.357 1.846 6.058l-.279 1.017 1.028-.282zm7.027-3.787c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path>
+    </svg>
+    <span class="absolute right-full mr-4 hidden whitespace-nowrap rounded-lg bg-red-600 px-3 py-1.5 text-sm font-bold text-yellow-300 shadow-lg group-hover:block border border-yellow-300 animate-pulse-fomo">TAXA FIXA 27% POR TEMPO LIMITADO!</span>
+</a>
+
+<div id="social-proof-toast" class="fixed bottom-20 left-4 z-[65] hidden items-center space-x-3 rounded-lg bg-white p-3 shadow-2xl transition-all duration-500 ease-out sm:bottom-28 sm:left-6 dark:bg-subtle-dark dark:text-white border-l-4 border-primary">
+    <span class="material-symbols-outlined text-green-500">check_circle</span>
+    <p class="text-sm font-semibold text-text-light dark:text-text-dark" id="toast-message">
+        </p>
+</div>
+
+<div id="exit-intent-modal" class="fixed inset-0 z-[70] hidden items-center justify-center bg-secondary/80 backdrop-blur-sm transition-opacity duration-300">
+    <div class="animate-fade-in-scale-up mx-4 max-w-lg rounded-xl bg-background-light p-8 text-center shadow-2xl dark:bg-subtle-dark">
+        <span class="material-symbols-outlined text-6xl text-urgency-red">gpp_maybe</span>
+        <h3 class="mt-4 text-3xl font-black font-display text-text-light dark:text-white">Não Vá Sem Seu Preço Final!</h3>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+            Fale com um especialista AGORA e ganhe um <strong>BÔNUS EXCLUSIVO</strong> de <strong>R$ 50,00 de desconto</strong> no seu primeiro pedido.
+        </p>
+        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20quero%20minha%20cota%C3%A7%C3%A3o%20transparente%20e%20o%20b%C3%B4nus%20de%20R%24%2050%2C00!" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-urgency-red px-8 py-3 text-xl font-bold text-white transition-colors hover:bg-red-700 shadow-xl">
+            <span class="material-symbols-outlined mr-2">whatsapp</span> QUERO MEU BÔNUS DE R$ 50,00 AGORA!
+        </a>
+        <button id="close-exit-modal" class="mt-3 text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-text-light dark:hover:text-white transition-colors">Não, obrigado. Quero pagar mais caro.</button>
+    </div>
+</div>
+
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-subtle-dark/90 backdrop-blur-md shadow-lg">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-14 sm:h-16 items-center justify-between">
+            <a aria-label="Bestguai - Não perca tempo e dinheiro nas suas compras no Paraguai." class="flex items-center gap-2 text-secondary dark:text-text-dark" href="#">
+                <div class="size-8 sm:size-9 text-secondary-light">
+                    <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-extrabold font-display">Bestguai</h2>
+            </a>
+            <div class="items-center gap-3 sm:gap-6 flex">
+                
+              <a class="group relative text-sm font-semibold text-secondary transition-colors hover:text-primary dark:text-gray-300 dark:hover:text-primary hidden sm:block" href="#" title="Trabalhe como Bestie e Ganhe Dinheiro Entregando">Seja um Entregador Bestie! <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span></a>
+
+                <a class="hidden sm:inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-darker" href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20quero%20minha%20cota%C3%A7%C3%A3o%20transparente!" target="_blank" rel="noopener noreferrer">Cotação Imediata no WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+     <div class="sticky top-14 sm:top-16 z-40 bg-secondary-light/95 dark:bg-primary-darker/95 p-2 text-center shadow-lg transition-all duration-300">
+        <p class="text-sm font-semibold text-white">
+            <span class="font-black">OFERTA DE TRANSPARÊNCIA:</span> Seu <strong>Markup Fixo 27%</strong> + <strong>Frete Grátis</strong> na primeira cotação. Válido por: <span id="fomo-timer" class="ml-2 font-black"></span>
+        </p>
+    </div>
+
+    <main class="grow">
+        <section class="relative py-24 sm:py-32 hero-bg">
+    <div class="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+        <div class="text-center">
+            <h1 class="text-4xl font-black leading-tight tracking-tighter text-white md:text-5xl lg:text-6xl font-display animate-fade-in-scale-up" style="animation-delay: 0.2s; opacity: 0;">
+                <span class="text-red-400">PARE DE ARRISCAR!</span> Cotação <u class="decoration-primary decoration-4">SEM SURPRESA</u> com Taxa Fixa (27%) e Entrega <b class="text-primary-darker">100% Segura</b> do Paraguai.
+            </h1>
+            <p class="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-sans font-semibold">
+                Seu maior medo é <strong>ser taxado/fiscalizado</strong> ou o produto vir errado? Clique e receba sua cotação que <strong class="text-primary-darker">GARANTE</strong> o preço final, impostos e a entrega protegida no WhatsApp!
+            </p>
+        </div>
+
+        <div class="mt-12 flex flex-col items-center gap-4">
+            <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20quero%20minha%20cota%C3%A7%C3%A3o%20transparente!" target="_blank" rel="noopener noreferrer" 
+               class="flex h-16 min-w-full sm:min-w-[20rem] cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-green-500 px-8 text-xl font-black text-white shadow-2xl transition-all duration-200 hover:bg-green-600 hover:shadow-3xl hover:-translate-y-1 active:translate-y-0 animate-fade-in-scale-up" style="animation-delay: 0.4s; opacity: 0;">
+                <span class="material-symbols-outlined mr-2 text-2xl">whatsapp</span>
+                <span class="truncate">COTAÇÃO IMEDIATA & SEM RISCO NO WHATSAPP</span>
+            </a>
+            
+            <div class="mt-2 text-sm text-gray-200 font-semibold flex items-center gap-4 justify-center">
+                <span class="flex items-center gap-1 text-primary-darker">
+                    <span class="material-symbols-outlined text-yellow-400 text-base">star</span>
+                    <span class="material-symbols-outlined text-yellow-400 text-base">star</span>
+                    <span class="material-symbols-outlined text-yellow-400 text-base">star</span>
+                    <span class="material-symbols-outlined text-yellow-400 text-base">star</span>
+                    <span class="material-symbols-outlined text-yellow-400 text-base">star</span>
+                    <strong>Nota 4.9/5</strong> em Segurança
+                </span>
+                <span class="hidden sm:inline-flex items-center gap-1">
+                    <span class="material-symbols-outlined text-green-400 text-base">check_circle</span>
+                    +1.000 Entregas Seguras Concluídas!
+                </span>
+            </div>
+        </div>
+
+       
+    </div>
+</section>
+
+        <section class="py-20 sm:py-32 bg-subtle-light dark:bg-subtle-dark" id="o-que-e">
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-black tracking-tight text-text-light dark:text-text-dark sm:text-5xl font-display">ACABOU O PERRENGUE! A Única Plataforma que Protege a Sua Compra no Paraguai.</h2> <p class="mt-6 text-xl leading-relaxed text-gray-600 dark:text-gray-400">Bestguai é a <strong>plataforma inteligente que elimina todos os riscos e perrengues</strong> de <strong>comprar produtos do Paraguai</strong>. Com a ajuda do nosso sistema inteligente (<strong>IA Base44</strong>) e <strong>Entregadores Besties de confiança</strong>, garantimos o <strong>preço final transparente (com 27% de Taxa Fixa)</strong>, <strong>verificação do produto</strong>, <strong>rastreamento completo</strong> e <strong>entrega segura</strong> direto para sua casa. Sua tranquilidade é nossa missão!</p>
+                </div>
+                <div class="mt-20 text-center max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl font-display">O QUE VOCÊ VAI DEIXAR DE PERDER AO USAR O BESTGUAI?</h2>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 gap-8 text-left sm:grid-cols-2 lg:grid-cols-5">
+                    <div class="flex flex-col gap-4 rounded-xl bg-background-light dark:bg-background-dark p-8 text-center shadow-xl border-2 border-primary/20 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-primary">
+                        <span class="material-symbols-outlined text-5xl text-secondary-light">request_quote</span> <h3 id="card-headline-1" class="font-black text-xl text-text-light dark:text-text-dark font-display">PERDER DINHEIRO com preço alto?</h3>
+                        <p class="text-base text-gray-500 dark:text-gray-400">Com o Bestguai, você tem a <strong>cotação transparente com IA</strong> que inclui todos os impostos e a <strong>Taxa Fixa de 27%</strong>. <strong>Preço final garantido</strong>!</p>
+                    </div>
+                    <div class="flex flex-col gap-4 rounded-xl bg-background-light dark:bg-background-dark p-8 text-center shadow-xl border-2 border-primary/20 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-primary">
+                        <span class="material-symbols-outlined text-5xl text-secondary-light">local_shipping</span> <h3 class="font-black text-xl text-text-light dark:text-text-dark font-display">ARISCAR SUA ENCOMENDA de ser perdida?</h3>
+                        <p class="text-base text-gray-500 dark:text-gray-400">Nossa <strong>entrega segura de CDE para o Brasil</strong> conta com <strong>rastreamento internacional</strong> e <strong>seguro total</strong> contra perdas ou danos. Sua encomenda está protegida.</p>
+                    </div>
+                    <div class="flex flex-col gap-4 rounded-xl bg-background-light dark:bg-background-dark p-8 text-center shadow-xl border-2 border-primary/20 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-primary">
+                        <span class="material-symbols-outlined text-5xl text-secondary-light">gpp_maybe</span> <h3 class="font-black text-xl text-text-light dark:text-text-dark font-display">SER ENGANADO com produto falso?</h3>
+                        <p class="text-base text-gray-500 dark:text-gray-400">Trabalhamos apenas com <strong>lojas confiáveis</strong>. Nossa <strong>verificação do produto por IA</strong> garante que você receba o item certo e original, protegendo seu dinheiro.</p>
+                    </div>
+                    <div class="flex flex-col gap-4 rounded-xl bg-background-light dark:bg-background-dark p-8 text-center shadow-xl border-2 border-primary/20 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-primary">
+                        <span class="material-symbols-outlined text-5xl text-secondary-light">timer_off</span> <h3 class="font-black text-xl text-text-light dark:text-text-dark font-display">PERDER TEMPO com burocracia e filas?</h3>
+                        <p class="text-base text-gray-500 dark:text-gray-400">Esqueça a papelada! O Bestguai <strong>simplifica a importação</strong>, cuidando de todo o processo de imposto para você. <strong>Compra sem burocracia</strong> e com <strong>economia de tempo</strong>.</p>
+                    </div>
+                    <div class="flex flex-col gap-4 rounded-xl bg-background-light dark:bg-background-dark p-8 text-center shadow-xl border-2 border-primary/20 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-primary">
+                        <span class="material-symbols-outlined text-5xl text-secondary-light">rule</span> <h3 class="font-black text-xl text-text-light dark:text-text-dark font-display">FICAR NA DÚVIDA sobre o preço mais baixo?</h3>
+                        <p class="text-base text-gray-500 dark:text-gray-400">Nossa IA não só cote, mas também te ajuda a achar as <strong>melhores ofertas e os produtos mais baratos do Paraguai</strong> nas <strong>lojas mais recomendadas de CDE</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="mt-24 text-center max-w-3xl mx-auto" id="beneficios">
+                    <h2 class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl font-display">Por Que Comprar no Paraguai com a Bestguai é o Jeito MAIS SEGURO e BARATO.</h2>
+                </div>
+                <div class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-3">
+                    <div class="flex flex-col items-center text-center p-4"> <div class="flex size-16 items-center justify-center rounded-full bg-primary text-white shadow-xl"><span class="material-symbols-outlined text-4xl">payments</span></div> <h3 class="mt-5 text-2xl font-black font-display"><strong>Preço Fixo e Justo (Taxa Única de 27% GARANTIDA).</strong></h3> <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">Nosso sistema encontra o <strong>melhor preço</strong> nas lojas do Paraguai e cobra uma <strong>Taxa Fixa de 27%</strong> (já inclui imposto e nosso serviço). Sua <strong>economia</strong> é certa e sem surpresas.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4">
+                        <div class="flex size-16 items-center justify-center rounded-full bg-primary text-white shadow-xl"><span class="material-symbols-outlined text-4xl">verified_user</span></div>
+                        <h3 class="mt-5 text-2xl font-black font-display"><strong>Segurança TOTAL e Você Acompanha Pelo Celular.</strong></h3>
+                        <p class="mt-2 text-lg text-gray-600 dark:text-gray-400"><strong>Entregadores de confiança</strong>, <strong>verificação por IA</strong>, <strong>rastreamento internacional</strong> e <strong>seguro completo</strong> contra perdas. Sua <strong>compra no Paraguai é 100% garantida</strong>.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4">
+                        <div class="flex size-16 items-center justify-center rounded-full bg-primary text-white shadow-xl"><span class="material-symbols-outlined text-4xl">home_work</span></div>
+                        <h3 class="mt-5 text-2xl font-black font-display"><strong>Receba na Sua Casa sem Se Preocupar com a Alfândega.</strong></h3>
+                        <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">Nossos <strong>entregadores parceiros</strong> (Besties) trazem seu <strong>produto de CDE</strong> diretamente para sua porta no Brasil. <strong>Entrega garantida</strong> com rapidez e zero preocupação com a fiscalização.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-secondary dark:bg-background-dark text-text-dark" id="garantia">
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-black tracking-tight text-white sm:text-5xl font-display">GARANTIA BESTGUAI: Sua Compra no Paraguai 100% Livre de Risco.</h2>
+                    <p class="mt-4 text-xl text-gray-300">Entendemos seu medo. Por isso, eliminamos as 3 maiores preocupações de quem compra no Paraguai:</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <div class="flex flex-col items-center text-center p-6 bg-subtle-dark/50 rounded-xl shadow-xl border-4 border-white/10">
+                        <div class="flex size-16 items-center justify-center rounded-full bg-green-500 text-white shadow-xl"><span class="material-symbols-outlined text-4xl">thumb_up</span></div>
+                        <h3 class="mt-5 text-2xl font-black font-display text-white">Risco de Ser Taxado na Estrada? ZERO.</h3>
+                        <p class="mt-2 text-lg text-gray-400">Nós legalizamos a entrada. Se o produto for barrado ou taxado, você recebe <strong>100% do seu dinheiro de volta</strong>. Risco zero para você!</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-subtle-dark/50 rounded-xl shadow-xl border-4 border-white/10">
+                        <div class="flex size-16 items-center justify-center rounded-full bg-green-500 text-white shadow-xl"><span class="material-symbols-outlined text-4xl">verified</span></div>
+                        <h3 class="mt-5 text-2xl font-black font-display text-white">Medo de Produto Falso/Errado? ZERO.</h3>
+                        <p class="mt-2 text-lg text-gray-400">Nosso sistema de <strong>Verificação Dupla (IA + Humana)</strong> garante a autenticidade e o estado do produto. Se for falso ou errado, <strong>100% do seu dinheiro de volta!</strong></p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-subtle-dark/50 rounded-xl shadow-xl border-4 border-white/10">
+                        <div class="flex size-16 items-center justify-center rounded-full bg-green-500 text-white shadow-xl"><span class="material-symbols-outlined text-4xl">lock</span></div>
+                        <h3 class="mt-5 text-2xl font-black font-display text-white">Extravio ou Perda na Entrega? ZERO.</h3>
+                        <p class="mt-2 text-lg text-gray-400">Sua encomenda tem <strong>Seguro Contra Perda e Roubo</strong> e <strong>Rastreamento Ponto a Ponto</strong>. Receba o valor integral de volta se o produto não chegar.</p>
+                    </div>
+                </div>
+                <div class="mt-16 text-center">
+                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20quero%20minha%20cota%C3%A7%C3%A3o%20e%20saber%20mais%20sobre%20a%20garantia%20de%20entrega!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-3 text-xl font-bold text-white transition-colors hover:bg-primary-darker shadow-2xl">
+                        <span class="material-symbols-outlined mr-2">whatsapp</span> FALE COM ESPECIALISTA E COTE AGORA!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="py-20 sm:py-32 bg-background-light dark:bg-subtle-dark" id="como-funcionar">
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-black tracking-tight text-text-light dark:text-text-dark sm:text-5xl font-display">Em 3 Passos Simples: Sua Compra do Paraguai Chega na Sua Casa.</h2> </div>
+                <div class="relative mt-20">
+                     <ol class="grid grid-cols-1 gap-16 md:grid-cols-3">
+                        <li class="flex flex-col items-center text-center">
+                            <div class="flex size-20 items-center justify-center rounded-full bg-primary text-4xl font-extrabold text-white z-10 shadow-xl font-display border-4 border-white/50">1</div> <div class="mt-6 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-6xl">link</span></div> <h3 class="mt-4 text-2xl font-black font-display">1. Cole o Link e Chame no Zap.</h3>
+                            <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">Você cola o link do produto que quer. Nossa IA analisa e te dá o <strong>preço final (com a Taxa Fixa de 27% e impostos)</strong> em segundos pelo WhatsApp, mostrando o quanto você vai <strong>economizar</strong>.</p> <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20quero%20minha%20cota%C3%A7%C3%A3o%20transparente!" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center text-sm font-bold text-green-500 hover:text-green-600 transition-colors">
+                        <span class="material-symbols-outlined mr-1 text-base">arrow_right_alt</span> Começar no WhatsApp agora
+                    </a>
+                        </li>
+                        <li class="flex flex-col items-center text-center">
+                            <div class="flex size-20 items-center justify-center rounded-full bg-primary text-4xl font-extrabold text-white z-10 shadow-xl font-display border-4 border-white/50">2</div>
+                            <div class="mt-6 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-6xl">shopping_cart_checkout</span></div>
+                            <h3 class="mt-4 text-2xl font-black font-display">2. Confirme o Pedido e Pague Sem Risco.</h3>
+                            <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">Gostou do preço? Confirme e pague de forma segura. Seus dados estão protegidos para sua <strong>compra tranquila</strong> no Paraguai. Um Bestie vai buscar e verificar seu produto.</p>
+                        </li>
+                        <li class="flex flex-col items-center text-center">
+                            <div class="flex size-20 items-center justify-center rounded-full bg-primary text-4xl font-extrabold text-white z-10 shadow-xl font-display border-4 border-white/50">3</div>
+                            <div class="mt-6 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-6xl">package_2</span></div>
+                            <h3 class="mt-4 text-2xl font-black font-display">3. Receba em Casa com Rastreio e Aproveite!</h3>
+                            <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">Acompanhe a <strong>entrega rastreada</strong> e receba seus <strong>produtos de CDE</strong> no conforto de casa, sem preocupações com papelada ou riscos na fronteira.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+                 <section class="py-20 sm:py-32 bg-secondary dark:bg-background-dark text-text-dark">
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl font-display">Lojas Parceiras: Compre Sem Medo, Apenas Lojas de Confiança no Paraguai.</h2>
+                    <p class="mt-4 text-xl text-gray-300">Conectamos você diretamente às gigantes de Ciudad del Este. Nossas parcerias garantem que seu produto é original e com o melhor preço, acessando o melhor do Paraguai sem sair de casa.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3">
+                    <a href="https://www.cellshop.com.py/" target="_blank" rel="nofollow noopener" class="flex flex-col items-center text-center bg-subtle-dark/50 p-8 rounded-xl border-4 border-primary/50 shadow-2xl transition-transform hover:scale-[1.05] hover:border-primary">
+                        <img alt="Logo Cellshop - Parceira Bestguai para eletrônicos do Paraguai" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-nnwgPTQqktY4-NDWBcQQNONp_jR38ICy_iQDdxoEhbs8fTBUR-fIMublGkIHJMeZeyhr4ggRfVgjaVwYqxDfWifuUO54Fs36snnd01bJ9DVBWpNPb8SDpmxUfQJUU8LoFSLr5PBEy2fNQ-lKRGUWxrqXqqRHxphtz_WH8GFGNjuRe7EOvmdrBaRG6zj3tW8rSbWtttt3eQ2CKzd1e34lqe-VVi_Wio9FggsxakD1ibzFj6UMcNDNnerRD7wU5ewqHaefLjxkl1ag"/>
+                        <h3 class="mt-6 text-xl font-bold font-display text-white">Cellshop</h3>
+                        <p class="mt-2 text-gray-400 text-base">A mais conhecida para eletrônicos e importados. Grande variedade com preços que ninguém bate.</p>
+                    </a>
+                    <a href="https://www.nissei.com/" target="_blank" rel="nofollow noopener" class="flex flex-col items-center text-center bg-subtle-dark/50 p-8 rounded-xl border-4 border-primary/50 shadow-2xl transition-transform hover:scale-[1.05] hover:border-primary">
+                        <img alt="Logo Nissei - Parceira Bestguai para tecnologia no Paraguai" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJmTWIi8BkOTNImCdcI0TvNfMWJx65jfUkQuysBlV9gJGERNzf9oXhJ-nsW54L7W3pmp_sJhCYUOwOIDWUVTZrjLKgciZSiY51AeYuDkyZPhFce_xY77MlZjplbVO26v3t4w-DlgEdMqngiq2vOvexmiuA8D0UDr2EeovBMYu2-7V4PxicUszDNmhuBUtNoyaUin_tqHC-Q7BmIfsdWSi2OR_jA4knbxn2MmYQj0b8zulMvxVtwDArXQ5HKcXv7iM_5jJ6cz_IWK3H"/>
+                        <h3 class="mt-6 text-xl font-bold font-display text-white">Nissei</h3>
+                        <p class="mt-2 text-gray-400 text-base">Especialista em foto, áudio e tecnologia. Encontre equipamentos de qualidade com economia real.</p>
+                    </a>
+                    <a href="https://www.megaeletronicos.com/" target="_blank" rel="nofollow noopener" class="flex flex-col items-center text-center bg-subtle-dark/50 p-8 rounded-xl border-4 border-primary/50 shadow-2xl transition-transform hover:scale-[1.05] hover:border-primary">
+                        <img alt="Logo Mega Eletrônicos - Parceira Bestguai para produtos diversos do Paraguai" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh05w750tHkNoImYhdjvA0sq6k0A_uE072g3KtRd1jXIbjDcolrLFQFFmhFaX1BqXUKrI-SBHU-3PTrGaajqZXWLM_peShfF1f7jY4qQ85ESGMpaXK7VKI1vffQN9pzkR6Roe7NZ2AE80zfwSDU0iVlxswHeLHCynqml6XJxGspeONeuuHYvrkMx-KIZb29QJ4c5gN8v675w501e6VwzMEtaWfBcx5za-NkJxfD-OPUGtcAJ2RfETpQZJ0YBC5rnwWfJEcpqdHc_gS"/>
+                        <h3 class="mt-6 text-xl font-bold font-display text-white">Mega Eletrônicos</h3>
+                        <p class="mt-2 text-gray-400 text-base">Um shopping de produtos. É a certeza de achar as melhores promoções em CDE.</p>
+                    </a>
+                    <a href="https://www.monalisa.com.py/" target="_blank" rel="nofollow noopener" class="flex flex-col items-center text-center bg-subtle-dark/50 p-8 rounded-xl border-4 border-primary/50 shadow-2xl transition-transform hover:scale-[1.05] hover:border-primary">
+                        <img alt="Logo Monalisa - Parceira Bestguai para Perfumaria e Luxo" class="h-16 w-auto opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFp-kNuFH5HcV2wW0Ik0cnNwEMi0xhV6eIabGUckVZDjh-GFLt8uZbn6b52DJoN5eVLRDLyhUIpa7Gg9qHqpmvz_mGm1jxU2tFPTLKkMls1pA71FQi5pdApsdyJ2SRs6YYe4GbAhNjbc3QM5CJPkMSSQSbO7j82EWnBRTHH4ZwKgSVaJeGwj1VaRcq4iBqKuDedKfbhfghqHnxKKgjZG5qjodFJOPi6uuy4AttludbjM_wV9y5-QvdOCdOFWYxa4Tu0fIblkLEsmOo"/>
+                        <h3 class="mt-6 text-xl font-bold font-display text-white">Monalisa</h3>
+                        <p class="mt-2 text-gray-400 text-base">Referência em perfumaria, moda e luxo. Os melhores preços em produtos de alto padrão.</p>
+                    </a>
+                    <a href="https://www.shoppingchina.com.py/" target="_blank" rel="nofollow noopener" class="flex flex-col items-center text-center bg-subtle-dark/50 p-8 rounded-xl border-4 border-primary/50 shadow-2xl transition-transform hover:scale-[1.05] hover:border-primary">
+                        <img alt="Logo Shopping China - Parceira Bestguai para diversos produtos do Paraguai" class="h-16 w-auto opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF4iJeehoYqW3bX1950qZKcIhJkVClMxkH8QjgvDd5Wg1z86oO0NAIrdVS3u9tZELyRcg7AD5F0jTqIU8gTJlUdIc6MxgoCkH1dXlpWdKGov9HgzjqWIQ3nZ4_vkpc3PDz_egpgsGDzKqIVm-WdNwd0Z0UMeAUnmy3oHHwWhen6NohMlOtYEW_cKp_trAilnwgUXDTOXzNVyqLAK-mjSj3lhxFm41p9zVtJgw0iIFJfEQaN_gvOtj6xwn9ZcZXJdFEiQxzHIyG6lUq"/>
+                        <h3 class="mt-6 text-xl font-bold font-display text-white">Shopping China</h3>
+                        <p class="mt-2 text-gray-400 text-base">O maior e mais famoso. Tudo em eletrônicos, casa, pesca e mais.</p>
+                    </a>
+                    <a href="https://www.atacadogames.com/" target="_blank" rel="nofollow noopener" class="flex flex-col items-center text-center bg-subtle-dark/50 p-8 rounded-xl border-4 border-primary/50 shadow-2xl transition-transform hover:scale-[1.05] hover:border-primary">
+                        <img alt="Logo Atacado Games - Parceira Bestguai para jogos e informática" class="h-16 w-auto opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGti16uhzP82UafGIajQrVYPEkh4UrMBhBMMSANZ6nleJsWBVTVIn05V56i6RvOyigN0bfrDsdlWmQ0rwsx6erPtAmbeQyt4tceJ1sXq_jiIL8lt79zlYieTJDgyg56WO2dRXWzrcgxeZT0-QftoC0DZJCwI7eMcLWg9gqM3NLx0Z39PDYn7xgK-yF5ALG9Moce6rbFNW7P7rultt0dtWKr9h0bRJCYJH0lJ1oQvL-j2E3d4bvrfeBU40oC-_BJSLGVhYw269EjHnG"/>
+                        <h3 class="mt-6 text-xl font-bold font-display text-white">Atacado Games</h3>
+                        <p class="mt-2 text-gray-400 text-base">O destino certo para gamers e quem busca os melhores preços em informática e jogos.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 sm:py-32 bg-subtle-light dark:bg-subtle-dark" id="prova-social">
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-black tracking-tight text-text-light dark:text-text-dark sm:text-5xl font-display">Veja Quem Já Comprou e Aprovou a Segurança e o Preço da Bestguai!</h2>
+                </div>
+                <div id="testimonial-carousel" class="mt-16 flex gap-8 overflow-x-auto pb-6 -mb-6 snap-x snap-mandatory scrollbar-hide">
+                    <div class="flex-shrink-0 w-[22rem] snap-start rounded-xl bg-background-light dark:bg-background-dark p-8 shadow-2xl flex flex-col border-b-4 border-primary">
+                        <div class="flex items-center gap-4">
+                            <img alt="Depoimento de cliente satisfeito com economia e segurança Bestguai para produtos do Paraguai" class="size-14 rounded-full border-4 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt-cqkoLBiybWbJSc24ay4Kk_PAK8b8ef0une2ky31E-s_JPi0wj51C5ZW48xml6g8mPKQrRiCv5VK9B5R-dTe3LeQC_8G8pWwhtVahov1lymEPEUeZ3Duu9_NN71GHbvOlJ4W8pKOle3pZDVV3n29bCSpQ9DC7G-nLzx0sO9V24bErXEXZAqj3K_GoExwKyVErCJJVBlgXcqzMBuG12RDs6f7iiejhaNVZMToEUU6HIh-3Cr0usQzIjaqL8QyOsnoxeIke1BGuiCW"/>
+                            <div>
+                                <h3 class="font-bold text-xl font-display">Economia Certa e Confiança!</h3>
+                                <div class="text-sm text-yellow-500 flex items-center gap-0.5 mt-1">★★★★★ (Nota 5/5)</div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600 dark:text-gray-400 italic text-base">"Antes eu vivia com medo de <strong>comprar em CDE</strong>. O Bestguai me deu total segurança e uma <strong>economia incrível</strong> que eu não esperava. É a melhor forma de <strong>comprar produtos do Paraguai</strong>! Meu <strong>eletrônico do Paraguai</strong> chegou perfeito!"</p>
+                        <p class="mt-4 text-base font-black text-right text-secondary-light">- João S., São Paulo</p>
+                    </div>
+                    <div class="flex-shrink-0 w-[22rem] snap-start rounded-xl bg-background-light dark:bg-background-dark p-8 shadow-2xl flex flex-col border-b-4 border-primary">
+                        <div class="flex items-center gap-4">
+                            <img alt="Depoimento de cliente feliz com a entrega segura Bestguai do Paraguai" class="size-14 rounded-full border-4 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCafXE2iapFUEVtI8KZ3Givahqi_aqr0XJIsCaZ5gmSUl2EmGBbRE5aYE8uwyLwVT5p-YvJwXbPgFVqAQHDoQB4mJoagxmw8DPSjDP-lk7QCXfK9hLi42mOWqNuGvTEsWDcg3OwqKXkR1N8mPoT1YwwbZvMkxGwKHkiCUtHph5DvZEdTfsA67b4mXwjFRRSNcc5fXdfGwNsAAvOuH7oFG2dqRd6ms6Zv3Q0Wss8J6aP6sxo0GfyL4pKNxX6tJizk6sGTI-UZzThhcfn"/>
+                            <div>
+                                <h3 class="font-bold text-xl font-display">Tranquilidade na Entrega!</h3>
+                                <div class="text-sm text-yellow-500 flex items-center gap-0.5 mt-1">★★★★★ (Nota 5/5)</div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600 dark:text-gray-400 italic text-base">"A <strong>entrega de produtos do Paraguai</strong> sempre foi minha maior dor de cabeça. Com o Bestguai, sei exatamente onde está minha compra e recebo em casa. A <strong>segurança na importação</strong> e o <strong>preço baixo</strong> são impagáveis!"</p>
+                        <p class="mt-4 text-base font-black text-right text-secondary-light">- Maria P., Curitiba</p>
+                    </div>
+                    <div class="flex-shrink-0 w-[22rem] snap-start rounded-xl bg-background-light dark:bg-background-dark p-8 shadow-2xl flex flex-col border-b-4 border-primary">
+                        <div class="flex items-center gap-4">
+                            <img alt="Depoimento de cliente que economizou tempo e burocracia com Bestguai para compras no Paraguai" class="size-14 rounded-full border-4 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmtSGCi2O6xDLa8SFKBV7EFG1JI7hkSJIjbPxngjUIdUy26rDdTfwXrUEiGugpo3OuwnzotzNFHNj9_YkIlMRh0G1skd--n-2c2-Kb5xc4zlOtjNNmBSf3TNrFfrHgXfcMZ4nMxPPxsORoHBXjzUZ-RgECv7iiQ-MEs9Kl_L7g22X6jg6XuPtXqcqnGSI8Oj9KzlROANuTKnia9nSZfoh5x6YDa38oxO97pveW2X02DJv_hulCVWxzq1t4oIYFAZtRKUgzMKB3SMtb"/>
+                            <div>
+                                <h3 class="font-bold text-xl font-display">Foco no Que Importa!</h3>
+                                <div class="text-sm text-yellow-500 flex items-center gap-0.5 mt-1">★★★★★ (Nota 5/5)</div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600 dark:text-gray-400 italic text-base">"Antes eu perdia tempo com cotação e burocracia para <strong>importar do Paraguai</strong>. Agora, uso o Bestguai e me concentro em aproveitar meus <strong>produtos de CDE</strong> e a <strong>economia</strong> que fiz!"</p>
+                        <p class="mt-4 text-base font-black text-right text-secondary-light">- Carlos A., Rio de Janeiro</p>
+                    </div>
+                    <div class="flex-shrink-0 w-[22rem] snap-start rounded-xl bg-background-light dark:bg-background-dark p-8 shadow-2xl flex flex-col border-b-4 border-primary">
+                        <div class="flex items-center gap-4">
+                            <img alt="Depoimento de cliente satisfeito" class="size-14 rounded-full border-4 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzoIzTeNi0qVwv4zCoqaAXg0UhHSP243fr4eodLVpfmC5vmcKtRc3fgmzmz0s7jQZaQezDtvlbjrFxgQHL8yWF4Re8ZxSvYA83lQAX0cOqTemqDj9LL7N7T6bge054XPTAP0aGEMXA1NWDIhXNOT7Xt1Orlvfy5Tf4a7RXzsjLPxWijEnNyELOmjykwU4MxPckeIE5wzPOBmyCMA12apS6NR7iiLqekx0fkNXA_AFC1l171tJv_MtfDiMYYN-zrUUARQPsCSNeSYd9"/>
+                            <div>
+                                <h3 class="font-bold text-xl font-display">Sem Surpresas, Preço Final Claro!</h3>
+                                <div class="text-sm text-yellow-500 flex items-center gap-0.5 mt-1">★★★★★ (Nota 5/5)</div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600 dark:text-gray-400 italic text-base">"A <strong>taxa fixa de 27%</strong> foi a chave. É libertador saber o <strong>preço final</strong> na cotação. Não tem aquele medo de <strong>ser taxado na fronteira</strong>. Minha <strong>compra no Paraguai</strong> chegou em 10 dias!"</p>
+                        <p class="mt-4 text-base font-black text-right text-secondary-light">- Fernando R., Belo Horizonte</p>
+                    </div>
+                    <div class="flex-shrink-0 w-[22rem] snap-start rounded-xl bg-background-light dark:bg-background-dark p-8 shadow-2xl flex flex-col border-b-4 border-primary">
+                        <div class="flex items-center gap-4">
+                            <img alt="Depoimento de cliente satisfeito" class="size-14 rounded-full border-4 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARknaljREo5W_FAAUfSqU4SA0VHh1L898TbVob8ZLjwyXsYpY_rxeJqjDEt8S4I5p5391B9cUa8UFODUmK9XXA7rt-kcUEDEimpK3n1Viv6aB8R2R3CrwP4ceL8fhnQJWfxr2VfpfmjD3_9qTxNw2h8iNvgYS-u0vVyoSgUMd52V9WWAil9x4Jret9fRCrLnbGkXHlPVdDbUrYpCDR6xiQvwvT2Oc34j__-fQjqnnnFDIuREeA1lcb_CR3tB8T1nCDXRrL0BJGd_mV"/>
+                            <div>
+                                <h3 class="font-bold text-xl font-display">Verificação e Qualidade 100%!</h3>
+                                <div class="text-sm text-yellow-500 flex items-center gap-0.5 mt-1">★★★★★ (Nota 5/5)</div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600 dark:text-gray-400 italic text-base">"Meu maior medo era o <strong>produto ser falso</strong> ou usado. O Bestguai verificou tudo com a <strong>IA</strong> e me mandou a prova. <strong>Importação do Paraguai</strong> com confiança total, recomendo!"</p>
+                        <p class="mt-4 text-gray-600 dark:text-gray-400 italic text-base">"Usei para <strong>comprar eletrônicos</strong> e a <strong>economia</strong> foi gigante. O Bestguai achou o <strong>preço mais baixo do Paraguai</strong> nas lojas que eu confio. Excelente serviço!"</p>
+                        <p class="mt-4 text-base font-black text-right text-secondary-light">- Roberto B., Porto Alegre</p>
+                    </div>
+                    <div class="flex-shrink-0 w-[22rem] snap-start rounded-xl bg-background-light dark:bg-background-dark p-8 shadow-2xl flex flex-col border-b-4 border-primary">
+                        <div class="flex items-center gap-4">
+                            <img alt="Depoimento de cliente satisfeito" class="size-14 rounded-full border-4 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg66pTq0obVOxpsZryuuFO01YY5gD8W1bcVYtD3MWzI5Q1EIyD11P5BWM-reikJQOWAweEshp2pVd6N0eu6cxrqlafGP519YYhlDApwr2nvsrX-jzxySe5woMchlrFq5M9VlEKMHMLzO461FFWmmapOcvTT2EMwpQU6KUP4103NIOWVo2TUK3rxSFdddHzogZTq0nmGJfZBL0AsD4qs3R04-yexbrSq6_VSl4ZUNW1Gs66peYX4aAMzWS5dmvq4F6h3zta9KFyguUS"/>
+                            <div>
+                                <h3 class="font-bold text-xl font-display">Logística Impecável!</h3>
+                                <div class="text-sm text-yellow-500 flex items-center gap-0.5 mt-1">★★★★★ (Nota 5/5)</div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600 dark:text-gray-400 italic text-base">"O <strong>rastreamento</strong> é muito detalhado. Vi a <strong>entrega do Paraguai</strong> passo a passo. A <strong>segurança</strong> e a pontualidade superaram minhas expectativas. Vale cada centavo da taxa fixa!"</p>
+                        <p class="mt-4 text-base font-black text-right text-secondary-light">- Juliana K., Recife</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <section class="py-20 sm:py-32 bg-background-light dark:bg-subtle-dark" id="faq">
+            <div class="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl font-display">Dúvidas Frequentes: O Bestguai é 100% Legal e Seguro?</h2>
+                </div>
+                <div class="mt-16 space-y-4">
+                    <details class="group rounded-lg bg-subtle-light p-6 dark:bg-background-dark">
+                        <summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-lg">
+                            <h3 class="flex-1 text-secondary dark:text-white font-display">Como o Bestguai garante o <strong>preço final para produtos do Paraguai</strong>, incluindo <strong>impostos e taxas</strong>?</h3>
+                            <span class="transition-transform duration-300 group-open:rotate-180 text-secondary-light">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="accordion-content">
+                            <p class="text-gray-600 dark:text-gray-400">Nossa IA compara ofertas das **melhores lojas em CDE** e calcula o **preço final** com o **Markup fixo de 27%** (tributação e custo de serviço) antes de você pagar. Garantimos a sua **economia** e total transparência!</p>
+                        </div>
+                    </details>
+                    <details class="group rounded-lg bg-subtle-light p-6 dark:bg-background-dark">
+                        <summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-lg">
+                            <h3 class="flex-1 text-secondary dark:text-white font-display">E se o produto vier errado ou com defeito na <strong>importação de CDE</strong>? Há <strong>garantia</strong>?</h3>
+                            <span class="transition-transform duration-300 group-open:rotate-180 text-secondary-light">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="accordion-content">
+                            <p class="text-gray-600 dark:text-gray-400">Sim, oferecemos **verificação do produto por IA** antes do envio e **seguro total contra defeitos de fábrica** e **extravios**. Sua **compra no Paraguai é 100% protegida** para sua tranquilidade.</p>
+                        </div>
+                    </details>
+                    <details class="group rounded-lg bg-subtle-light p-6 dark:bg-background-dark">
+                        <summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-lg">
+                            <h3 class="flex-1 text-secondary dark:text-white font-display">O serviço de **logística e importação do Paraguai** é legalizado? Como evito a Alfândega?</h3>
+                            <span class="transition-transform duration-300 group-open:rotate-180 text-secondary-light">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="accordion-content">
+                            <p class="text-gray-600 dark:text-gray-400">O Bestguai atua como intermediador logístico. O Markup de 27% **inclui a gestão fiscal e tributária** do produto, garantindo que o transporte do produto seja feito de forma legalizada até sua residência, eliminando seus riscos com a Alfândega na fronteira.</p>
+                        </div>
+                    </details>
+                    <details class="group rounded-lg bg-subtle-light p-6 dark:bg-background-dark">
+                        <summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-lg">
+                            <h3 class="flex-1 text-secondary dark:text-white font-display">Qual o custo da entrega no Brasil e quanto tempo leva para <strong>receber produtos do Paraguai</strong>?</h3>
+                            <span class="transition-transform duration-300 group-open:rotate-180 text-secondary-light">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="accordion-content">
+                            <p class="text-gray-600 dark:text-gray-400">O **custo da entrega já está totalmente incluso no Markup de 27%**, sem surpresas. O tempo médio para **receber em casa produtos do Paraguai** é de X a Y dias úteis, garantindo **agilidade na importação**.</p>
+                        </div>
+                    </details>
+                    </div>
+            </div>
+        </section>
+
+        <section class="py-20 sm:py-32 bg-primary">
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="rounded-xl p-10 sm:p-20 text-center bg-secondary/10 backdrop-blur-sm border-4 border-white/50 shadow-2xl"> <h2 class="text-4xl font-black tracking-tight text-white md:text-5xl max-w-4xl mx-auto font-display"> Não Perca Mais Tempo! Clique Agora e Garanta Seu <strong>Preço Final Sem Sustos</strong> na Compra do Paraguai.
+                    </h2>
+                    <div class="mt-12 flex justify-center">
+                        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20quero%C2%A0minha%20cota%C3%A7%C3%A3o%20transparente!" target="_blank" rel="noopener noreferrer" class="flex h-16 min-w-[14rem] max-w-lg cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-secondary px-10 text-xl font-black text-white shadow-2xl transition-all duration-200 hover:bg-opacity-90 hover:shadow-2xl hover:scale-[1.03] active:scale-100"> <span class="truncate">QUERO MINHA COTAÇÃO E O PREÇO FINAL AGORA!</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-secondary text-text-dark">
+        <div class="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <div>
+                    <a aria-label="Bestguai - Página Inicial" class="flex items-center gap-3 text-white" href="#">
+                        <div class="size-8 text-primary">
+                            <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold font-display">Bestguai</h2>
+                    </a>
+                    <div class="mt-4 max-w-xs text-gray-400 text-sm">
+                        <p>Bestguai Intermediações LTDA. (E-E-A-T)</p>
+                        <p>CNPJ: 00.000.000/0001-00</p>
+                        <p>Rua Exemplo, 123, Foz do Iguaçu - PR</p>
+                    </div>
+                    <div class="mt-8">
+                         <p class="font-bold text-primary">QUER FAZER PARTE DA FROTA BESTIE (ENTREGADORES)?</p>
+                         <a class="text-gray-400 transition-colors hover:text-white underline text-sm" href="#" title="Cadastre-se para ser um Entregador Bestie e ganhar dinheiro entregando produtos do Paraguai.">Clique aqui e cadastre-se para entregar encomendas e ganhar dinheiro.</a>
+                    </div>
+                    <div class="mt-8 flex gap-4">
+                        </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8 lg:col-span-2">
+                    <div>
+                        <p class="font-bold text-white text-lg">Empresa</p>
+                        <nav class="mt-4 flex flex-col space-y-2 text-base">
+                            <a class="text-gray-400 transition-colors hover:text-white" href="#">Trabalhe Conosco</a>
+                            <a class="text-gray-400 transition-colors hover:text-white" href="#">Contato</a>
+                        </nav>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white text-lg">Legal</p>
+                        <nav class="mt-4 flex flex-col space-y-2 text-base">
+                            <a class="text-gray-400 transition-colors hover:text-white" href="#">Termos de Serviço</a>
+                            <a class="text-gray-400 transition-colors hover:text-white" href="#">Política de Privacidade</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-border-dark pt-8 text-center">
+                <p class="text-sm text-gray-500">Bestguai: Sua <strong>plataforma inteligente para compras no Paraguai</strong>. <strong>Economia garantida</strong>, <strong>importação simplificada</strong> e <strong>entrega segura no Brasil</strong>. © 2024 Bestguai. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-0 left-0 right-0 z-[60] bg-urgency-red/95 backdrop-blur-sm p-3 shadow-[0_-5px_20px_rgba(0,0,0,0.5)] flex items-center justify-between sm:hidden">
+        <div class="flex flex-col text-left leading-none">
+            <p class="text-sm font-bold text-white uppercase">OFERTA LIMITADA:</p>
+            <p class="text-lg font-black text-yellow-300">Taxa Fixa 27% (Garantida!)</p>
+        </div>
+        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20quero%20minha%20cota%C3%A7%C3%A3o%20transparente%20com%20Taxa%20Fixa!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center rounded-full bg-green-500 px-4 py-2 text-md font-extrabold text-white transition-colors hover:bg-green-600 shadow-xl animate-pulse-whatsapp">
+            <span class="material-symbols-outlined text-xl">whatsapp</span>
+            COTAR AGORA!
+        </a>
+    </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Bestguai: Serviço de Cotação e Entrega de Produtos do Paraguai",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "1250"
+  },
+  "description": "Serviço de intermediação de compras no Paraguai com preço final garantido (Taxa Fixa 27%) e entrega segura no Brasil.",
+  "brand": {
+    "@type": "Organization",
+    "name": "Bestguai"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bestguai Intermediações LTDA",
+  "url": "https://www.bestguai.com",
+  "logo": "URL_DO_SEU_LOGO",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+55-NUMERO-DO-WHATSAPP",
+    "contactType": "customer service"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Exemplo, 123",
+    "addressLocality": "Foz do Iguaçu",
+    "addressRegion": "PR",
+    "postalCode": "00000-000",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "URL_DO_SEU_FACEBOOK",
+    "URL_DO_SEU_INSTAGRAM"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Como a Bestguai garante o Preço Final do produto do Paraguai, com Impostos e Tudo Incluso?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nossa IA compara ofertas das melhores lojas em CDE e calcula o preço final com a Taxa Fixa de 27% (imposto e custo de serviço) antes de você pagar. Garantimos a sua economia e total transparência!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "E se o produto vier errado ou com defeito na importação de CDE? Há garantia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, oferecemos verificação do produto por IA antes do envio e seguro total contra defeitos de fábrica e perdas no caminho. Sua compra no Paraguai é 100% protegida para sua tranquilidade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O serviço de entrega e importação do Paraguai é legalizado? Como evito a Alfândega?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Bestguai faz a intermediação da entrega. A Taxa Fixa de 27% inclui o pagamento do imposto e a gestão fiscal do produto, garantindo que o transporte seja feito de forma legalizada até sua residência. Você não corre risco de ter o produto parado na Alfândega na fronteira."
+      }
+    }
+  ]
+}
+</script>
+
+
+<script>
+    // 1. Definição do Mapa de Cópias (Você pode adicionar quantas campanhas precisar)
+    const campaignCopy = {
+        // Campanha 1: Foco em IMPOSTOS / RISCO ALFÂNDEGA
+        'impostos': {
+            'hero-headline': 'RISCO ZERO NA FRONTEIRA. Preço Final Garantido (<u class="decoration-primary decoration-8">Taxa Fixa 27%</u>) e Sem Preocupação com a Alfândega.',
+            // Negrito com <strong>
+            'hero-subhead': 'Cansado do <strong>MEDO de ter seu produto parado e taxado na estrada</strong>? Com o Bestguai, você paga a Taxa Fixa de 27% e nós cuidamos de TODA a burocracia fiscal. Cotação transparente e entrega 100% legalizada na sua casa. <strong>Sem surpresas!</strong>',
+            'cta-text-form': 'COTE O LINK & ELIMINE O RISCO DA ALFÂNDEGAS!',
+            'fomo-headline-text': 'TAXA FIXA 27% INCLUINDO TRIBUTOS!',
+            'card-headline-1': 'SER TAXADO inesperadamente?',
+        },
+        // Campanha 2: Foco em ECONOMIA / PREÇO BAIXO
+        'economia': {
+            'hero-headline': 'GARANTA A MÁXIMA ECONOMIA! Encontre o Melhor Preço do Paraguai com <u class="decoration-primary decoration-8">Taxa Fixa de 27%</u> e Sem Surpresas.',
+            // Negrito com <strong>
+            'hero-subhead': 'Por que pagar mais? Nossa IA te mostra o <strong>menor preço final</strong> (com Taxa Fixa de 27% e impostos) nas melhores lojas do Paraguai. Você economiza de verdade e recebe o produto seguro em casa. <strong>Clique e cote seu link!</strong>',
+            'cta-text-form': 'COTE O LINK & VEJA SUA ECONOMIA AGORA!',
+            'fomo-headline-text': 'TAXA FIXA 27% (A MELHOR DO MERCADO!)',
+            'card-headline-1': 'PERDER DINHEIRO com preço alto?',
+        },
+        // Copia Padrão (Fallback) - DEVE SER A MESMA DO HTML ORIGINAL
+        'default': {
+            'hero-headline': 'CHEGA DE PERDER DINHEIRO. Preço Final Garantido e Sem Sustos (<u class="decoration-primary decoration-8">Taxa Fixa 27%</u>) nas Compras do Paraguai.',
+            // Negrito com <strong>
+            'hero-subhead': 'Cansado de preços incertos, atravessadores e o <strong>risco de ter o produto parado na Alfândega</strong>? O Bestguai resolve. Você cota, vê o valor total (com impostos e nossa Taxa Fixa de 27% **JÁ INCLUÍDA**) e a gente entrega seguro na sua casa no Brasil. <strong>Sem dor de cabeça!</strong>',
+            'cta-text-form': 'COTE O LINK & VEJA SUA ECONOMIA AGORA!',
+            'fomo-headline-text': 'OFERTA POR TEMPO LIMITADO:',
+            'card-headline-1': 'PERDER DINHEIRO com preço alto?',
+        }
+    };
+
+    // 2. Função Principal para Aplicar a Copy
+    function applyDynamicCopy() {
+        const urlParams = new URLSearchParams(window.location.search);
+        // O parâmetro que você irá usar na URL é 'campanha' (ex: ?campanha=impostos)
+        const campaignKey = urlParams.get('campanha'); 
+        
+        // Verifica se o parâmetro existe e se ele está no nosso mapa
+        const copyToApply = campaignCopy[campaignKey] || campaignCopy['default'];
+        
+        // Aplica a cópia a cada elemento
+        for (const id in copyToApply) {
+            const element = document.getElementById(id);
+            if (element) {
+                // Para textos que podem conter tags HTML (como o <u> na headline), usamos innerHTML
+                element.innerHTML = copyToApply[id];
+            }
+        }
+    }
+
+    // Chama a função ao carregar a página (antes dos outros scripts)
+    document.addEventListener('DOMContentLoaded', applyDynamicCopy);
+
+    // SCRIPT DE PROVA SOCIAL EM TEMPO REAL (CRO - Validação Social)
+    function startSocialProofToast() {
+        const toast = document.getElementById('social-proof-toast');
+        const messageElement = document.getElementById('toast-message');
+        if (!toast || !messageElement) return;
+
+        const messages = [
+            { name: 'João P.', city: 'São Paulo', product: 'um iPhone 15 Pro' },
+            { name: 'Maria C.', city: 'Belo Horizonte', product: 'um PS5 Slim' },
+            { name: 'Felipe G.', city: 'Curitiba', product: 'uma RTX 4080' },
+            { name: 'Ana B.', city: 'Porto Alegre', product: 'um notebook Gamer' },
+            { name: 'Lucas R.', city: 'Rio de Janeiro', product: 'uma Câmera Sony' }
+        ];
+
+        let currentMessageIndex = 0;
+
+        const showToast = () => {
+            const item = messages[currentMessageIndex];
+            // Gera uma economia aleatória e formatada em Real
+            const randomSavings = (Math.floor(Math.random() * (1500 - 500 + 1)) + 500).toLocaleString('pt-BR');
+            
+            messageElement.innerHTML = `<strong>${item.name}</strong>, de ${item.city}, acabou de cotar <strong>${item.product}</strong> e economizou <strong>R$ ${randomSavings}</strong> com a Bestguai!`;
+            
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+
+            setTimeout(() => {
+                toast.classList.remove('flex');
+                toast.classList.add('hidden');
+                currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+            }, 5000); // Mostra por 5 segundos
+        };
+
+        // Inicia o primeiro toast após um delay e repete
+        setTimeout(() => {
+            showToast();
+            setInterval(showToast, 10000); // Repete a cada 10 segundos (5s visível + 5s invisível)
+        }, 3000); // 3 segundos de delay inicial
+    }
+    document.addEventListener('DOMContentLoaded', startSocialProofToast);
+
+    // SCRIPT PARA EXIT-INTENT MODAL (CRO - Captura de Abandono)
+    function setupExitIntentModal() {
+        const modal = document.getElementById('exit-intent-modal');
+        const closeButton = document.getElementById('close-exit-modal');
+        if (!modal || !closeButton) return;
+
+        let isModalShown = false;
+
+        // Handler para simular o Exit Intent (rolagem para cima ou inatividade)
+        let lastScrollTop = 0;
+        const scrollHandler = () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
+            
+            // Simula o movimento do mouse para fora (rolagem para cima rápida) e se já rolou um pouco
+            if (scrollDirection === 'up' && scrollTop < (lastScrollTop - 50) && scrollTop > 200 && !isModalShown) {
+                showModal();
+                window.removeEventListener('scroll', scrollHandler);
+            }
+            lastScrollTop = scrollTop;
+        };
+
+        const showModal = () => {
+            if (!isModalShown) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                isModalShown = true;
+            }
+        };
+
+        // Adiciona o handler de scroll
+        window.addEventListener('scroll', scrollHandler);
+
+        // Adiciona o handler de fechar
+        closeButton.addEventListener('click', () => {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        });
+
+        // Timeout de 60 segundos (se o usuário não se engajar)
+        setTimeout(() => {
+            showModal();
+            window.removeEventListener('scroll', scrollHandler);
+        }, 60000); // 60 segundos de inatividade
+    }
+    document.addEventListener('DOMContentLoaded', setupExitIntentModal);
+
+    // Script de progresso de scroll (Mantido)
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollProgress = (scrollTop / scrollHeight) * 100;
+        document.getElementById('scroll-progress').style.width = scrollProgress + '%';
+    });
+
+    // SCRIPT PARA O SCROLL AUTOMÁTICO DO CARROSSEL (Mantido)
+    document.addEventListener('DOMContentLoaded', () => {
+        const carousel = document.getElementById('testimonial-carousel');
+        if (carousel) {
+            const cards = carousel.querySelectorAll('.flex-shrink-0');
+            if (cards.length > 0) {
+                const cardWidth = cards[0].offsetWidth;
+                const gap = 32;
+                const scrollDistance = cardWidth + gap;
+                const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+                const performScroll = () => {
+                    if (carousel.scrollLeft >= maxScroll - 5) {
+                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        carousel.scrollBy({ left: scrollDistance, behavior: 'smooth' });
+                    }
+                };
+
+                let scrollInterval = setInterval(performScroll, 4000);
+
+                const stopScroll = () => clearInterval(scrollInterval);
+                const startScroll = () => { scrollInterval = setInterval(performScroll, 4000); };
+
+                carousel.addEventListener('mouseover', stopScroll);
+                carousel.addEventListener('mouseout', startScroll);
+                carousel.addEventListener('touchstart', stopScroll);
+                carousel.addEventListener('touchend', startScroll);
+            }
+        }
+    });
+
+   
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollProgress = (scrollTop / scrollHeight) * 100;
+        document.getElementById('scroll-progress').style.width = scrollProgress + '%';
+    });
+
+
+    // SCRIPT PARA OTIMIZAÇÃO 1: BANNER DE FOMO (CONTADOR REGRESSIVO)
+    function startCountdown() {
+        const timerElement = document.getElementById('fomo-timer');
+        if (!timerElement) return;
+
+        let endTime = localStorage.getItem('fomoEndTime');
+
+        if (!endTime || new Date(parseInt(endTime)).getTime() < new Date().getTime()) {
+            // Se não houver fim de tempo ou se o tempo já passou, define para 24h a partir de agora
+            const newEndTime = new Date().getTime() + (24 * 60 * 60 * 1000); 
+            localStorage.setItem('fomoEndTime', newEndTime);
+            endTime = newEndTime;
+        } else {
+            endTime = parseInt(endTime);
+        }
+        
+        const updateTimer = () => {
+            const now = new Date().getTime();
+            const distance = endTime - now;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                // Reinicia o timer para 24 horas e chama a função novamente
+                localStorage.removeItem('fomoEndTime');
+                startCountdown();
+                return;
+            }
+
+            // Cálculos de tempo (Horas, Minutos, Segundos)
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+
+            // Atualiza o display
+            timerElement.innerHTML = `
+                <span class="font-black">${hours}</span>h
+                <span class="font-black">${minutes}</span>m
+                <span class="font-black">${seconds}</span>s
+            `;
+        };
+
+        const countdownInterval = setInterval(updateTimer, 1000);
+        updateTimer(); // Chama imediatamente para evitar atraso no primeiro segundo
+    };
+
+    // Inicializa o contador ao carregar a página
+    window.addEventListener('load', startCountdown);
+</script>
+</body>
+</html>

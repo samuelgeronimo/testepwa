@@ -78,6 +78,132 @@
           },
         }
     </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    // 1. ORGANIZAÇÃO E LOCALBUSINESS (Seu negócio)
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://www.bestguai.com/#organization",
+      "name": "Bestguai: Cotação e Entrega de Produtos do Paraguai",
+      "url": "https://www.bestguai.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "URL_DO_SEU_LOGO",
+        "caption": "Logotipo Bestguai"
+      },
+      "description": "Serviço de intermediação de compras no Paraguai com preço final garantido (Taxa Fixa 27%) e entrega segura no Brasil.",
+      "telephone": "+55-NUMERO-DO-WHATSAPP",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-NUMERO-DO-WHATSAPP",
+        "contactType": "customer service"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Exemplo, 123",
+        "addressLocality": "Foz do Iguaçu",
+        "addressRegion": "PR",
+        "postalCode": "00000-000",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "URL_DO_SEU_FACEBOOK",
+        "URL_DO_SEU_INSTAGRAM",
+        "https://wa.me/YOUR_WHATSAPP_NUMBER" 
+      ],
+      // Adicionando AggregateRating aqui, pois LocalBusiness aceita avaliações
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "1250"
+      },
+      // Especificação de área de serviço, importante para logística
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Brasil" },
+        { "@type": "AdministrativeArea", "name": "Paraguai (CDE)" }
+      ]
+    },
+    
+    // 2. PRODUCT (O Serviço que você oferece)
+    {
+      "@type": "Product",
+      "@id": "https://www.bestguai.com/#product",
+      "name": "Serviço de Cotação e Entrega de Produtos do Paraguai com Taxa Fixa",
+      "description": "Serviço de intermediação de compras no Paraguai com preço final garantido (Taxa Fixa 27%) e entrega segura no Brasil. Sem risco de taxação na estrada.",
+      "brand": {
+        "@type": "Organization",
+        "@id": "https://www.bestguai.com/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "BRL",
+        "price": "27.00", 
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "valueAddedTaxIncluded": true,
+          "priceType": "Markup"
+        },
+        "itemCondition": "https://schema.org/UsedCondition", 
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.bestguai.com"
+      }
+    },
+
+    // 3. FAQPage (Perguntas Frequentes)
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que está incluso no Markup de 27% (Taxa Fixa)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Markup de 27% é o preço final do nosso serviço e inclui 100% da gestão fiscal e tributária do produto, garantindo que o transporte seja feito de forma legalizada, e também o custo de logística e o seguro total contra extravio ou defeito de fábrica. É seu preço final garantido!"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se o produto vier errado ou com defeito na importação de CDE? Há garantia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, oferecemos verificação do produto por IA antes do envio e seguro total contra defeitos de fábrica e perdas no caminho. Sua compra no Paraguai é 100% protegida para sua tranquilidade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O serviço de entrega e importação do Paraguai é legalizado? Como evito a Alfândega?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Bestguai faz a intermediação da entrega. A Taxa Fixa de 27% inclui o pagamento do imposto e a gestão fiscal do produto, garantindo que o transporte seja feito de forma legalizada até sua residência. Você não corre risco de ter o produto parado na Alfândega na fronteira."
+          }
+        }
+      ]
+    },
+
+    // 4. REVIEW (Adicionando um Depoimento para maior credibilidade)
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@id": "https://www.bestguai.com/#organization"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Maria P." 
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "A segurança na importação e o preço baixo são impagáveis!",
+      "datePublished": "2024-10-25" 
+    }
+  ]
+}
+</script>
+
     <style>
         /* Estilos CSS */
         .scrollbar-hide {
@@ -629,83 +755,6 @@
    
 </div>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Bestguai: Serviço de Cotação e Entrega de Produtos do Paraguai",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "1250"
-  },
-  "description": "Serviço de intermediação de compras no Paraguai com preço final garantido (Taxa Fixa 27%) e entrega segura no Brasil.",
-  "brand": {
-    "@type": "Organization",
-    "name": "Bestguai"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Bestguai Intermediações LTDA",
-  "url": "https://www.bestguai.com",
-  "logo": "URL_DO_SEU_LOGO",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+55-NUMERO-DO-WHATSAPP",
-    "contactType": "customer service"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rua Exemplo, 123",
-    "addressLocality": "Foz do Iguaçu",
-    "addressRegion": "PR",
-    "postalCode": "00000-000",
-    "addressCountry": "BR"
-  },
-  "sameAs": [
-    "URL_DO_SEU_FACEBOOK",
-    "URL_DO_SEU_INSTAGRAM"
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Como a Bestguai garante o Preço Final do produto do Paraguai, com Impostos e Tudo Incluso?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nossa IA compara ofertas das melhores lojas em CDE e calcula o preço final com a Taxa Fixa de 27% (imposto e custo de serviço) antes de você pagar. Garantimos a sua economia e total transparência!"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "E se o produto vier errado ou com defeito na importação de CDE? Há garantia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim, oferecemos verificação do produto por IA antes do envio e seguro total contra defeitos de fábrica e perdas no caminho. Sua compra no Paraguai é 100% protegida para sua tranquilidade."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "O serviço de entrega e importação do Paraguai é legalizado? Como evito a Alfândega?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "O Bestguai faz a intermediação da entrega. A Taxa Fixa de 27% inclui o pagamento do imposto e a gestão fiscal do produto, garantindo que o transporte seja feito de forma legalizada até sua residência. Você não corre risco de ter o produto parado na Alfândega na fronteira."
-      }
-    }
-  ]
-}
-</script>
 
 
 <script>

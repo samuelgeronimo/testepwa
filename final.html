@@ -66,6 +66,11 @@
     </script>
     <style>
         /* Estilos CSS */
+
+        html, body {
+          overflow-x: hidden !important; /* O !important é um seguro para anular qualquer estilo conflitante */
+          width: 100%; /* Garante que a largura do corpo e HTML é 100% da viewport */
+        }
         .scrollbar-hide {
             -ms-overflow-style: none;
             scrollbar-width: none;
@@ -121,7 +126,7 @@
         }
     </style>
 </head>
-<body class="font-sans bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark">
+<body class="font-sans bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark overflow-x-hidden">
 <div id="scroll-progress"></div>
 
 <a aria-label="Fale conosco no WhatsApp" class="fixed group bottom-5 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 p-3 text-white shadow-xl transition-transform hover:scale-110 active:scale-95 animate-pulse-whatsapp hidden sm:flex" href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o%20imediata%20de%20produtos%20do%20Paraguai%20com%20o%20Bestguai!" rel="noopener noreferrer" target="_blank" title="FALE COM A GENTE (WhatsApp): Resposta na Hora!">

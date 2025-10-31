@@ -29,7 +29,8 @@
                 "subtle-light": "#F0F4F8",
                 "subtle-dark": "#162B42",
                 "border-light": "#E0E0E0",
-                "border-dark": "#30455A"
+                "border-dark": "#30455A",
+                "accent-orange": "#F5A623" // Definido para o banner fixo
               },
               fontFamily: {
                 "display": ["Montserrat", "sans-serif"],
@@ -53,6 +54,19 @@
                 'pulse-fomo': {
                     '0%, 100%': { opacity: '1' },
                     '50%': { opacity: '0.9' },
+                },
+                'shake': { /* Adicionado Keyframes de Shake */
+                    '0%': { transform: 'translate(1px, 1px) rotate(0deg);' },
+                    '10%': { transform: 'translate(-1px, -2px) rotate(-1deg);' },
+                    '20%': { transform: 'translate(-3px, 0px) rotate(1deg);' },
+                    '30%': { transform: 'translate(3px, 2px) rotate(0deg);' },
+                    '40%': { transform: 'translate(1px, -1px) rotate(1deg);' },
+                    '50%': { transform: 'translate(-1px, 2px) rotate(-1deg);' },
+                    '60%': { transform: 'translate(-3px, 1px) rotate(0deg);' },
+                    '70%': { transform: 'translate(3px, 1px) rotate(-1deg);' },
+                    '80%': { transform: 'translate(-1px, -1px) rotate(1deg);' },
+                    '90%': { transform: 'translate(1px, 2px) rotate(0deg);' },
+                    '100%': { transform: 'translate(1px, -2px) rotate(-1deg);' },
                 }
               },
               animation: {
@@ -66,11 +80,6 @@
     </script>
     <style>
         /* Estilos CSS */
-
-        html, body {
-          overflow-x: hidden !important; /* O !important é um seguro para anular qualquer estilo conflitante */
-          width: 100%; /* Garante que a largura do corpo e HTML é 100% da viewport */
-        }
         .scrollbar-hide {
             -ms-overflow-style: none;
             scrollbar-width: none;
@@ -80,6 +89,20 @@
             display: none;
             width: 0;
             height: 0;
+        }
+        
+        /* CORREÇÃO DO BUG: Garante que nada vai sair das bordas horizontais */
+        html, body {
+            overflow-x: hidden !important; 
+            width: 100%;
+        }
+
+        /* Aplica a animação no botão do WhatsApp */
+        .whatsapp-cta-shake { 
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
         }
 
         .material-symbols-outlined {
@@ -129,11 +152,29 @@
 <body class="font-sans bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark overflow-x-hidden">
 <div id="scroll-progress"></div>
 
-<a aria-label="Fale conosco no WhatsApp" class="fixed group bottom-5 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 p-3 text-white shadow-xl transition-transform hover:scale-110 active:scale-95 animate-pulse-whatsapp hidden sm:flex" href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o%20imediata%20de%20produtos%20do%20Paraguai%20com%20o%20Bestguai!" rel="noopener noreferrer" target="_blank" title="FALE COM A GENTE (WhatsApp): Resposta na Hora!">
-    <svg class="h-9 w-9" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.357 1.846 6.058l-.279 1.017 1.028-.282zm7.027-3.787c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path>
+<div id="sticky-timer-banner" class="md:hidden fixed top-0 left-0 w-full z-40 bg-urgency-red/95 p-2 shadow-2xl text-center">
+    <p class="text-white text-sm font-semibold mb-1 uppercase">
+        ⚠️ Oferta de Taxa Fixo 27% expira em:
+    </p>
+    <div id="sticky-timer-display" class="flex justify-center items-center text-white space-x-2">
+        <span class="font-black text-xl">00</span><span class="text-sm">h</span>
+        <span class="font-black text-xl">00</span><span class="text-sm">m</span>
+        <span class="font-black text-xl">00</span><span class="text-sm">s</span>
+    </div>
+    <a href="#ID_DA_SUA_SECAO_DE_COTAÇÃO" class="mt-2 inline-block w-full bg-yellow-300 text-gray-900 font-bold py-1 rounded-md text-sm hover:bg-yellow-400">
+        CLIQUE PARA GARANTIR ESTA CONDIÇÃO!
+    </a>
+</div>
+<a aria-label="Fale conosco no WhatsApp - Cotação Imediata" 
+    class="fixed bottom-5 right-5 z-50 flex items-center gap-2 h-14 px-6 rounded-full bg-green-600 text-white font-bold shadow-2xl transition-all duration-300 hover:bg-green-700 hover:scale-110 whatsapp-cta-shake" 
+    href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20quero%20minha%20cota%C3%A7%C3%A3o%20transparente%20AGORA!"
+    target="_blank"
+>
+    <svg fill="currentColor" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.04 2C6.54 2 2.05 6.49 2.05 12c0 1.74.46 3.44 1.32 4.94L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zM19.05 16.29c-.88 1.48-2.14 2.62-3.64 3.23l-.31.14-3.56-.94-.3.18c-1.27.75-2.73 1.15-4.21 1.15-4.54 0-8.24-3.7-8.24-8.24 0-4.54 3.7-8.24 8.24-8.24 2.22 0 4.29.86 5.82 2.39s2.39 3.6 2.39 5.82c0 1.95-.6 3.82-1.65 5.34zM16.96 14.81c-.24-.48-.99-.86-1.39-.96-.4-.1-.69-.15-.99.3-.3.45-1.15 1.4-1.41 1.7-.26.3-.51.34-.96.09-.45-.25-1.92-.71-3.66-2.25-1.35-1.18-2.26-2.65-2.51-3.1-.25-.45 0-.7.2-.9.2-.2.43-.5.64-.75.21-.25.27-.47.4-.73.13-.26.06-.48-.03-.68-.09-.2-.99-2.39-1.36-3.27-.37-.88-.76-.75-1.3-.76-.54-.01-1.16-.01-1.78.01-.62.02-1.63.74-1.63 2.07 0 1.33.6 2.58 1.36 3.79 1.05 1.63 2.45 3.3 4.28 4.73 2.1 1.71 3.87 2.21 4.71 2.47.84.26 1.34.22 1.83.14.5-.08 1.54-.63 1.76-1.24.22-.61.22-1.12.15-1.24-.08-.12-.29-.18-.54-.31z"/>
     </svg>
-    <span class="absolute right-full mr-4 hidden whitespace-nowrap rounded-lg bg-red-600 px-3 py-1.5 text-sm font-bold text-yellow-300 shadow-lg group-hover:block border border-yellow-300 animate-pulse-fomo">TAXA FIXA 27% POR TEMPO LIMITADO!</span>
+    
+    <span class="text-lg">🚨 **Quero a Cotação AGORA!**</span>
 </a>
 
 <div id="social-proof-toast" class="fixed bottom-20 left-4 z-[65] hidden items-center space-x-3 rounded-lg bg-white p-3 shadow-2xl transition-all duration-500 ease-out sm:bottom-28 sm:left-6 dark:bg-subtle-dark dark:text-white border-l-4 border-primary">
@@ -255,21 +296,34 @@
                     </div>
                 </div>
 
-                <div class="mt-24 text-center max-w-3xl mx-auto" id="beneficios">
-                    <h2 class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl font-display">Por Que Comprar no Paraguai com a Bestguai é o Jeito MAIS SEGURO e BARATO.</h2>
+                <div class="mt-24 text-center">
+                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20quero%20come%C3%A7ar%20agora%20a%20economizar%20com%20o%20Bestguai!" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center justify-center rounded-xl bg-primary px-10 py-4 text-2xl font-black text-white shadow-xl transition-colors hover:bg-primary-darker hover:shadow-2xl">
+                        <span class="material-symbols-outlined mr-3 text-3xl">whatsapp</span> COMEÇAR MINHA COTAÇÃO AGORA!
+                    </a>
                 </div>
-                <div class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-3">
-                    <div class="flex flex-col items-center text-center p-4"> <div class="flex size-16 items-center justify-center rounded-full bg-primary text-white shadow-xl"><span class="material-symbols-outlined text-4xl">payments</span></div> <h3 class="mt-5 text-2xl font-black font-display"><strong>Preço Fixo e Justo (Taxa Única de 27% GARANTIDA).</strong></h3> <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">Nosso sistema encontra o <strong>melhor preço</strong> nas lojas do Paraguai e cobra uma <strong>Taxa Fixa de 27%</strong> (já inclui imposto e nosso serviço). Sua <strong>economia</strong> é certa e sem surpresas.</p>
+
+            </section>
+
+        <section class="py-20 sm:py-32 bg-secondary dark:bg-background-dark text-text-dark" id="vantagens">
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl font-display">Por Que Comprar no Paraguai com a Bestguai é o Jeito MAIS SEGURO e BARATO.</h2>
+                </div>
+                <div class="mt-20 grid grid-cols-1 gap-8 lg:grid-cols-3">
+                    <div class="flex flex-col items-center text-center p-6 bg-subtle-dark/50 rounded-xl shadow-xl border-4 border-white/10">
+                        <div class="flex size-16 items-center justify-center rounded-full bg-urgency-red text-white shadow-xl"><span class="material-symbols-outlined text-4xl">gpp_maybe</span></div>
+                        <h3 class="mt-5 text-2xl font-black font-display text-white">Medo de Ser Taxado na Estrada? ZERO.</h3>
+                        <p class="mt-2 text-lg text-gray-400">Nós legalizamos a entrada. Se o produto for barrado ou taxado, você recebe <strong>100% do seu dinheiro de volta</strong>. Risco zero para você!</p>
                     </div>
-                    <div class="flex flex-col items-center text-center p-4">
-                        <div class="flex size-16 items-center justify-center rounded-full bg-primary text-white shadow-xl"><span class="material-symbols-outlined text-4xl">verified_user</span></div>
-                        <h3 class="mt-5 text-2xl font-black font-display"><strong>Segurança TOTAL e Você Acompanha Pelo Celular.</strong></h3>
-                        <p class="mt-2 text-lg text-gray-600 dark:text-gray-400"><strong>Entregadores de confiança</strong>, <strong>verificação por IA</strong>, <strong>rastreamento internacional</strong> e <strong>seguro completo</strong> contra perdas. Sua <strong>compra no Paraguai é 100% garantida</strong>.</p>
+                    <div class="flex flex-col items-center text-center p-6 bg-subtle-dark/50 rounded-xl shadow-xl border-4 border-white/10">
+                        <div class="flex size-16 items-center justify-center rounded-full bg-green-500 text-white shadow-xl"><span class="material-symbols-outlined text-4xl">verified</span></div>
+                        <h3 class="mt-5 text-2xl font-black font-display text-white">Medo de Produto Falso/Errado? ZERO.</h3>
+                        <p class="mt-2 text-lg text-gray-400">Nosso sistema de <strong>Verificação Dupla (IA + Humana)</strong> garante a autenticidade e o estado do produto. Se for falso ou errado, <strong>100% do seu dinheiro de volta!</strong></p>
                     </div>
-                    <div class="flex flex-col items-center text-center p-4">
-                        <div class="flex size-16 items-center justify-center rounded-full bg-primary text-white shadow-xl"><span class="material-symbols-outlined text-4xl">home_work</span></div>
-                        <h3 class="mt-5 text-2xl font-black font-display"><strong>Receba na Sua Casa sem Se Preocupar com a Alfândega.</strong></h3>
-                        <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">Nossos <strong>entregadores parceiros</strong> (Besties) trazem seu <strong>produto de CDE</strong> diretamente para sua porta no Brasil. <strong>Entrega garantida</strong> com rapidez e zero preocupação com a fiscalização.</p>
+                    <div class="flex flex-col items-center text-center p-6 bg-subtle-dark/50 rounded-xl shadow-xl border-4 border-white/10">
+                        <div class="flex size-16 items-center justify-center rounded-full bg-secondary-light text-white shadow-xl"><span class="material-symbols-outlined text-4xl">lock</span></div>
+                        <h3 class="mt-5 text-2xl font-black font-display text-white">Extravio ou Perda na Entrega? ZERO.</h3>
+                        <p class="mt-2 text-lg text-gray-400">Sua encomenda tem <strong>Seguro Contra Perda e Roubo</strong> e <strong>Rastreamento Ponto a Ponto</strong>. Receba seu produto ou <strong>seu dinheiro de volta</strong>.</p>
                     </div>
                 </div>
             </div>
@@ -374,6 +428,9 @@
                         <h3 class="mt-6 text-xl font-bold font-display text-white">Atacado Games</h3>
                         <p class="mt-2 text-gray-400 text-base">O destino certo para gamers e quem busca os melhores preços em informática e jogos.</p>
                     </a>
+                </div>
+                 <div class="mt-16 text-center">
+                    <p class="text-lg font-semibold text-white">Não encontrou sua loja? <a class="text-primary hover:text-primary-darker underline" href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20quero%20cotar%20em%20outra%20loja%20do%20Paraguai" target="_blank">Fale no WhatsApp para cotação em outras lojas.</a></p>
                 </div>
             </div>
         </section>
@@ -569,16 +626,7 @@
         </div>
     </footer>
 
-    <div class="fixed bottom-0 left-0 right-0 z-[60] bg-urgency-red/95 backdrop-blur-sm p-3 shadow-[0_-5px_20px_rgba(0,0,0,0.5)] flex items-center justify-between sm:hidden">
-        <div class="flex flex-col text-left leading-none">
-            <p class="text-sm font-bold text-white uppercase">OFERTA LIMITADA:</p>
-            <p class="text-lg font-black text-yellow-300">Taxa Fixa 27% (Garantida!)</p>
-        </div>
-        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Ol%C3%A1%2C%20quero%20minha%20cota%C3%A7%C3%A3o%20transparente%20com%20Taxa%20Fixa!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center rounded-full bg-green-500 px-4 py-2 text-md font-extrabold text-white transition-colors hover:bg-green-600 shadow-xl animate-pulse-whatsapp">
-            <span class="material-symbols-outlined text-xl">whatsapp</span>
-            COTAR AGORA!
-        </a>
-    </div>
+   
 </div>
 
 <script type="application/ld+json">
@@ -853,20 +901,28 @@
 
     // SCRIPT PARA OTIMIZAÇÃO 1: BANNER DE FOMO (CONTADOR REGRESSIVO)
     function startCountdown() {
-        const timerElement = document.getElementById('fomo-timer');
-        if (!timerElement) return;
+        // Elementos de Display
+        const mainTimerElement = document.getElementById('fomo-timer'); // Timer na barra superior
+        const stickyTimerElement = document.getElementById('sticky-timer-display'); // O novo timer fixo para mobile
+
+        // Garante que pelo menos um timer exista antes de começar
+        if (!mainTimerElement && !stickyTimerElement) {
+            return;
+        }
 
         let endTime = localStorage.getItem('fomoEndTime');
+        const oneDay = 24 * 60 * 60 * 1000; // 24 horas em milissegundos
 
-        if (!endTime || new Date(parseInt(endTime)).getTime() < new Date().getTime()) {
-            // Se não houver fim de tempo ou se o tempo já passou, define para 24h a partir de agora
-            const newEndTime = new Date().getTime() + (24 * 60 * 60 * 1000); 
+        if (!endTime) {
+            // Se não existe, define o fim para 24h a partir de agora
+            const newEndTime = new Date().getTime() + oneDay;
             localStorage.setItem('fomoEndTime', newEndTime);
             endTime = newEndTime;
         } else {
+            // Se existe, apenas carrega o valor
             endTime = parseInt(endTime);
         }
-        
+
         const updateTimer = () => {
             const now = new Date().getTime();
             const distance = endTime - now;
@@ -884,12 +940,23 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
             const seconds = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
 
-            // Atualiza o display
-            timerElement.innerHTML = `
-                <span class="font-black">${hours}</span>h
-                <span class="font-black">${minutes}</span>m
-                <span class="font-black">${seconds}</span>s
-            `;
+            // 1. Atualiza o display principal (na barra superior, estilo grande)
+            if (mainTimerElement) {
+                mainTimerElement.innerHTML = `
+                    <span class="font-black">${hours}</span>h
+                    <span class="font-black">${minutes}</span>m
+                    <span class="font-black">${seconds}</span>s
+                `;
+            }
+
+            // 2. Atualiza o display fixo (no banner mobile, estilo pequeno)
+            if (stickyTimerElement) {
+                stickyTimerElement.innerHTML = `
+                    <span class="font-black text-xl">${hours}</span><span class="text-sm">h</span>
+                    <span class="font-black text-xl">${minutes}</span><span class="text-sm">m</span>
+                    <span class="font-black text-xl">${seconds}</span><span class="text-sm">s</span>
+                `;
+            }
         };
 
         const countdownInterval = setInterval(updateTimer, 1000);
@@ -897,7 +964,10 @@
     };
 
     // Inicializa o contador ao carregar a página
-    window.addEventListener('load', startCountdown);
+    window.addEventListener('load', () => {
+        startCountdown();
+    });
 </script>
+
 </body>
 </html>
